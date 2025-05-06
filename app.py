@@ -166,7 +166,8 @@ def write_query(state: State):
     )
     structured_llm = llm.with_structured_output(QueryOutput)
     result = structured_llm.invoke(prompt)
-    return {"query": result["query"]}
+    return {"query": result.query}
+
 
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 
