@@ -198,7 +198,7 @@ graph = graph_builder.compile()
 
 def process_question(question: str):
     try:
-        state = {"question": question}
+        state: State = {"question": question, "expanded_question": "", "query": "", "result": "", "answer": ""}
         result = graph.invoke(state)
 
         return (
