@@ -138,11 +138,11 @@ query_prompt_template = ChatPromptTemplate(
     [("system", system_message), ("user", user_prompt)]
 )
 
-from typing_extensions import Annotated
+from pydantic import BaseModel, Field
 
-class QueryOutput(TypedDict):
+class QueryOutput(BaseModel):
+    query: str = Field(..., description="Syntactically valid SQL query.")
 
-    query: Annotated[str, ..., "Syntactically valid SQL query."]
 
 def natural_language_expand(state: State):
     prompt = (
