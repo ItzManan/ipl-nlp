@@ -1,0 +1,9 @@
+gradio
+langchain
+langchain-community
+langchain-core
+typing-extensions
+python-dotenv
+psycopg2-binary
+google-generativeai
+langgraph
