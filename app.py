@@ -149,6 +149,8 @@ def natural_language_expand(state: State):
 f"""You are an assistant that rewrites vague or short cricket database queries into detailed, unambiguous natural language.
 Expand and clarify the following user query into a complete and clear bullet points that can be understood by a SQL generator.
 A bowler or a batter be referred to as a player.
+Table Info: {db.get_table_info()}
+Do not suggest any column names that are not defined in the given schema.
 User Query: {state["question"]}"""
     )
     response = llm.invoke(prompt)
