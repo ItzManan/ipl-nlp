@@ -227,6 +227,7 @@ with gr.Blocks(title="🏏 IPL Natural Language Stats Explorer") as demo:
         # 🏏 IPL Natural Language Stats Explorer
         ##### Ask IPL-related questions in plain English. The system will convert it to SQL, run it, and give you an answer.
         ##### Made by Sanchit Jain. Connect with me on [LinkedIn](https://www.linkedin.com/in/sanchit-jain-2a1374258/)
+        ##### Data till 6th May, 2025
         """
     )
     llm_model = gr.Dropdown(
