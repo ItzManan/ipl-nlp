@@ -173,6 +173,7 @@ def build_graph(llm):
         prompt = (
 f"""
 You are a helpful assistant that explains SQL query results to users in a clear and professional way.
+Avoid using codeblocks and quoteblocks.
 
 Given the following:
 - **User Question**: {state["question"]}
