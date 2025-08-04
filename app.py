@@ -226,7 +226,6 @@ with gr.Blocks(title="🏏 IPL Natural Language Stats Explorer") as demo:
         """
         # 🏏 IPL Natural Language Stats Explorer
         ##### Ask IPL-related questions in plain English. The system will convert it to SQL, run it, and give you an answer.
-        ##### Made by Sanchit Jain. Connect with me on [LinkedIn](https://www.linkedin.com/in/sanchit-jain-2a1374258/)
         ##### Data till 6th May, 2025
         """
     )
@@ -246,7 +245,6 @@ with gr.Blocks(title="🏏 IPL Natural Language Stats Explorer") as demo:
                 placeholder="e.g. Most sixes in IPL 2023 by a player"
             )
             submit_button = gr.Button("Submit", variant="primary")
-            database_schema_link = gr.Markdown("Check out the Database Schema in detail [here](https://dbdocs.io/sanchitjain1107/ipl-database?view=relationships)")
             database_schema = gr.Image("ipl-database-erd.png", label="Database Schema")
         with gr.Column():
             final_answer = gr.Markdown(value="📋 Final Answer", container=True)
